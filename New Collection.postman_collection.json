@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "c87d06b2-7a0a-43e1-88f7-3b36e8515f56",
+		"judul": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38299345"
+	},
+	"item": [
+		{
+			"judul": "get komik",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/get-komik",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-komik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"judul": "get komik by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/get-komik-by-id?id=1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"get-komik-by-id"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"judul": "store komik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"judul\": \"naruto\",\n    \"pengarang\": \"naryo\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/store-komik",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"store-komik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"judul": "update komik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 3,\n    \"judul\": \"naturo\",\n    \"pengarang\": \"masasih kismoto\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/update-komik",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"update-komik"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"judul": "Delete komik",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/delete-komik",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"delete-komik"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

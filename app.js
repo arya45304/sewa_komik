@@ -42,9 +42,9 @@ app.get('/get-komik-by-id', function (req, res) {
 app.post('/store-komik', function (req, res) {
   const param = req.body;
   const judul = param.judul;
-  const penulis = param.penulis;
-  const queryStr = 'INSERT INTO komik (judul, penulis) VALUES (?, ?)';
-  const values = [judul, penulis];
+  const pengarang = param.pengarang;
+  const queryStr = 'INSERT INTO komik (judul, pengarang) VALUES (?, ?)';
+  const values = [judul, pengarang];
 
   conn.query(queryStr, values, (err, results) => {
     if (err) {
@@ -63,9 +63,9 @@ app.post('/update-komik', function (req, res) {
   const param = req.body;
   const id = param.id;
   const judul = param.judul;
-  const penulis = param.penulis;
-  const queryStr = 'UPDATE komik SET judul = ?, penulis = ? WHERE id = ? AND deleted_at IS NULL';
-  const values = [judul, penulis, id];
+  const pengarang = param.pengarang;
+  const queryStr = 'UPDATE komik SET judul = ?, pengarang = ? WHERE id = ? AND deleted_at IS NULL';
+  const values = [judul, pengarang, id];
   conn.query(queryStr, values, (err, results) => {
     if (err) {
       console.log(err);
